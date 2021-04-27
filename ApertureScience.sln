@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Ext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Messaging.Implementation", "ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj", "{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Web.ApiGateway.Event", "ApertureScience.Web.ApiGateway.Event\ApertureScience.Web.ApiGateway.Event.csproj", "{6159883B-8075-4019-AD24-EAA7D75312A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6159883B-8075-4019-AD24-EAA7D75312A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6159883B-8075-4019-AD24-EAA7D75312A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6159883B-8075-4019-AD24-EAA7D75312A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6159883B-8075-4019-AD24-EAA7D75312A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
