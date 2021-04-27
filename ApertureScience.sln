@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqrs.Command.Abstraction", "ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj", "{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Event.Abstraction", "ApertureScience.Library.Event.Abstraction\ApertureScience.Library.Event.Abstraction.csproj", "{9BD23D1B-173C-4B6C-B3BF-6130B0744766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD23D1B-173C-4B6C-B3BF-6130B0744766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD23D1B-173C-4B6C-B3BF-6130B0744766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD23D1B-173C-4B6C-B3BF-6130B0744766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD23D1B-173C-4B6C-B3BF-6130B0744766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
