@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqrs.Query.Abstraction", "ApertureScience.Library.Cqrs.Query.Abstraction\ApertureScience.Library.Cqrs.Query.Abstraction.csproj", "{7E379F85-9429-4AAE-83A6-5DE840C83141}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqrs.Command.Abstraction", "ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj", "{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7E379F85-9429-4AAE-83A6-5DE840C83141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E379F85-9429-4AAE-83A6-5DE840C83141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E379F85-9429-4AAE-83A6-5DE840C83141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
