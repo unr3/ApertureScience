@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Eve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Extension", "ApertureScience.Library.Extension\ApertureScience.Library.Extension.csproj", "{2AA66741-DD9E-437C-839D-4DACCA742142}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Messaging.Implementation", "ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj", "{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2AA66741-DD9E-437C-839D-4DACCA742142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AA66741-DD9E-437C-839D-4DACCA742142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AA66741-DD9E-437C-839D-4DACCA742142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
