@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Messaging.Abstraction", "ApertureScience.Library.Messaging.Abstraction\ApertureScience.Library.Messaging.Abstraction.csproj", "{B5E53BD5-6089-4160-9363-B822360B8A14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Messaging.Abstraction", "ApertureScience.Library.Messaging.Abstraction\ApertureScience.Library.Messaging.Abstraction.csproj", "{B5E53BD5-6089-4160-9363-B822360B8A14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqrs.Query.Abstraction", "ApertureScience.Library.Cqrs.Query.Abstraction\ApertureScience.Library.Cqrs.Query.Abstraction.csproj", "{7E379F85-9429-4AAE-83A6-5DE840C83141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Cqrs.Query.Abstraction", "ApertureScience.Library.Cqrs.Query.Abstraction\ApertureScience.Library.Cqrs.Query.Abstraction.csproj", "{7E379F85-9429-4AAE-83A6-5DE840C83141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Cqrs.Command.Abstraction", "ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj", "{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Cqrs.Command.Abstraction", "ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj", "{F6A1DA0F-B54F-4F45-AF60-3CA5B5176997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Event.Abstraction", "ApertureScience.Library.Event.Abstraction\ApertureScience.Library.Event.Abstraction.csproj", "{9BD23D1B-173C-4B6C-B3BF-6130B0744766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Event.Abstraction", "ApertureScience.Library.Event.Abstraction\ApertureScience.Library.Event.Abstraction.csproj", "{9BD23D1B-173C-4B6C-B3BF-6130B0744766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Extension", "ApertureScience.Library.Extension\ApertureScience.Library.Extension.csproj", "{2AA66741-DD9E-437C-839D-4DACCA742142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Extension", "ApertureScience.Library.Extension\ApertureScience.Library.Extension.csproj", "{2AA66741-DD9E-437C-839D-4DACCA742142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Library.Messaging.Implementation", "ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj", "{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Library.Messaging.Implementation", "ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj", "{93A52B16-0D22-459B-AF75-4ECA4B7DB93D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Web.ApiGateway.Event", "ApertureScience.Web.ApiGateway.Event\ApertureScience.Web.ApiGateway.Event.csproj", "{6159883B-8075-4019-AD24-EAA7D75312A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Web.ApiGateway.Event", "ApertureScience.Web.ApiGateway.Event\ApertureScience.Web.ApiGateway.Event.csproj", "{6159883B-8075-4019-AD24-EAA7D75312A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeGenerator.Domain", "ApertureScience.ActivationCodeGenerator.Domain\ApertureScience.ActivationCodeGenerator.Domain.csproj", "{218B4E83-0B4A-4983-B841-DDFBD3678F63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.ActivationCodeGenerator.Domain", "ApertureScience.ActivationCodeGenerator.Domain\ApertureScience.ActivationCodeGenerator.Domain.csproj", "{218B4E83-0B4A-4983-B841-DDFBD3678F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeGenerator.Data", "ApertureScience.ActivationCodeGenerator.Data\ApertureScience.ActivationCodeGenerator.Data.csproj", "{6FB8B15E-D854-44FC-9FE3-D71FDCED600C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.ActivationCodeGenerator.Data", "ApertureScience.ActivationCodeGenerator.Data\ApertureScience.ActivationCodeGenerator.Data.csproj", "{6FB8B15E-D854-44FC-9FE3-D71FDCED600C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Enrollment.Domain", "ApertureScience.Enrollment.Domain\ApertureScience.Enrollment.Domain.csproj", "{FD75B9C8-8862-4E67-BC2C-1BFE5CFC123E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{6FB8B15E-D854-44FC-9FE3-D71FDCED600C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB8B15E-D854-44FC-9FE3-D71FDCED600C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB8B15E-D854-44FC-9FE3-D71FDCED600C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD75B9C8-8862-4E67-BC2C-1BFE5CFC123E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD75B9C8-8862-4E67-BC2C-1BFE5CFC123E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD75B9C8-8862-4E67-BC2C-1BFE5CFC123E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD75B9C8-8862-4E67-BC2C-1BFE5CFC123E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
