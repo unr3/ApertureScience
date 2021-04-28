@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApertureScience.Library.Extension\ApertureScience.Library.Extension.csproj" />
     <ProjectReference Include="..\ApertureScience.Library.Messaging.Abstraction\ApertureScience.Library.Messaging.Abstraction.csproj" />
     <ProjectReference Include="..\ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj" />
     <ProjectReference Include="..\ApertureScience.Web.ApiGateway.Event\ApertureScience.Web.ApiGateway.Event.csproj" />

@@ -34,11 +34,11 @@ namespace ApertureScience.Library.Messaging.Implementation
             if (await ExistsAsync())
             {
                 var peeked = await _queueClient.PeekMessageAsync();
-
-                IMessage message = JsonConvert.DeserializeObject<BasicMessage>(peeked.Value.Body.ToString());
-              
-                
-                result= message.MessageId == messageId;
+                if (peeked != null && peeked.Value != null)
+                {
+                    IMessage message = JsonConvert.DeserializeObject<BasicMessage>(peeked.Value.Body.ToString());
+                    result = message.MessageId == messageId;
+                }
             }
             else
             {
