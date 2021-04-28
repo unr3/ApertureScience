@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Enrollment.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Enrollment.Data", "ApertureScience.Enrollment.Data\ApertureScience.Enrollment.Data.csproj", "{D601F339-DBBC-4058-8F33-A931256E90B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Domain", "ApertureScience.AccelerometerIngest.Domain\ApertureScience.AccelerometerIngest.Domain.csproj", "{1622DF13-791C-422B-B83B-34ED37864178}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.AccelerometerIngest.Domain", "ApertureScience.AccelerometerIngest.Domain\ApertureScience.AccelerometerIngest.Domain.csproj", "{1622DF13-791C-422B-B83B-34ED37864178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Data", "ApertureScience.AccelerometerIngest.Data\ApertureScience.AccelerometerIngest.Data.csproj", "{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.AccelerometerIngest.Data", "ApertureScience.AccelerometerIngest.Data\ApertureScience.AccelerometerIngest.Data.csproj", "{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Web.ApiGateway", "ApertureScience.Web.ApiGateway\ApertureScience.Web.ApiGateway.csproj", "{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
