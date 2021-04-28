@@ -1,3 +1,7 @@
+using ApertureScience.Library.Event.Abstraction;
+using ApertureScience.Library.Messaging.Abstraction;
+using ApertureScience.Library.Messaging.Implementation;
+using ApertureScience.Web.ApiGateway.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +33,10 @@ namespace ApertureScience.Web.ApiGateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IQueueInfoService, QueueInfoService>();
+            services.AddScoped<IEventDispatcher, EventDispatcher>();
+            services.AddScoped<IQueueManager, BasicStorageQueueManager>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -64,7 +72,7 @@ namespace ApertureScience.Web.ApiGateway
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+           
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -75,7 +83,7 @@ namespace ApertureScience.Web.ApiGateway
 
             app.UseRouting();
 
-            app.UseAuthorization();
+         
 
             app.UseEndpoints(endpoints =>
             {
