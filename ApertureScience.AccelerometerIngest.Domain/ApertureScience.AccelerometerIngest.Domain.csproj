@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj" />
+    <ProjectReference Include="..\ApertureScience.Library.Cqrs.Query.Abstraction\ApertureScience.Library.Cqrs.Query.Abstraction.csproj" />
+    <ProjectReference Include="..\ApertureScience.Library.Event.Abstraction\ApertureScience.Library.Event.Abstraction.csproj" />
+  </ItemGroup>
+</Project>
