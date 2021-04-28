@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Enrollment.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Domain", "ApertureScience.AccelerometerIngest.Domain\ApertureScience.AccelerometerIngest.Domain.csproj", "{1622DF13-791C-422B-B83B-34ED37864178}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Data", "ApertureScience.AccelerometerIngest.Data\ApertureScience.AccelerometerIngest.Data.csproj", "{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{1622DF13-791C-422B-B83B-34ED37864178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1622DF13-791C-422B-B83B-34ED37864178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1622DF13-791C-422B-B83B-34ED37864178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
