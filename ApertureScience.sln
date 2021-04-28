@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Acceleromet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.AccelerometerIngest.Data", "ApertureScience.AccelerometerIngest.Data\ApertureScience.AccelerometerIngest.Data.csproj", "{E9C76BB9-3FD2-4B57-994F-698632E6FDF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Web.ApiGateway", "ApertureScience.Web.ApiGateway\ApertureScience.Web.ApiGateway.csproj", "{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Web.ApiGateway", "ApertureScience.Web.ApiGateway\ApertureScience.Web.ApiGateway.csproj", "{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeGenerator.Function", "ApertureScience.ActivationCodeGenerator.Function\ApertureScience.ActivationCodeGenerator.Function.csproj", "{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
