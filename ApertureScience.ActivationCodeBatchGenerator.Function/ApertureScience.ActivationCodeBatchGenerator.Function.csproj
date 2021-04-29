@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.14" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApertureScience.ActivationCodeGenerator.Data\ApertureScience.ActivationCodeGenerator.Data.csproj" />
+    <ProjectReference Include="..\ApertureScience.ActivationCodeGenerator.Domain\ApertureScience.ActivationCodeGenerator.Domain.csproj" />
+    <ProjectReference Include="..\ApertureScience.Library.Cqrs.Command.Abstraction\ApertureScience.Library.Cqrs.Command.Abstraction.csproj" />
+    <ProjectReference Include="..\ApertureScience.Library.Extension\ApertureScience.Library.Extension.csproj" />
+    <ProjectReference Include="..\ApertureScience.Library.Messaging.Implementation\ApertureScience.Library.Messaging.Implementation.csproj" />
+    <ProjectReference Include="..\ApertureScience.Web.ApiGateway.Event\ApertureScience.Web.ApiGateway.Event.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
