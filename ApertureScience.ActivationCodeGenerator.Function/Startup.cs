@@ -31,8 +31,7 @@ namespace ApertureScience.ActivationCodeGenerator.Function
 
             string conStr = Environment.GetEnvironmentVariable("ConStr");
             builder.Services.AddDbContext<ActivationCodeDbContext>(options =>
-            options.UseSqlServer("Server=DESKTOP-GJ41AKU\\SQLEXPRESS;Database=Aperture;Trusted_Connection=true;")
-            );
+            options.UseSqlServer(conStr));
             builder.Services.AddScoped<IQueryHandler<GetByCodeQuery, ActivationCode>, GetByCodeCodeQueryHandler>();
              builder.Services.AddScoped<ICommandHandler<CreateActivationCodeCommand, CommandResult>, ActivationCodeCommandHandler>();
             builder.Services.AddScoped<IActivationCodeProcessor, ActivationCodeProcessor>();
