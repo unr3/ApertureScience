@@ -113,5 +113,46 @@ namespace ApertureScience.Web.ApiGateway.Controllers
 
 
         }
+
+
+
+        [HttpPost]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(CheckInResponseViewModel))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Produces("application/json")]
+        public async Task<ActionResult<CheckInResponseViewModel>> CheckIn(CheckInViewModel checkIn)
+        {
+           
+            if (!ModelState.IsValid)
+            {
+                if (!ModelState.IsValid)
+                {
+                    var errors = new List<string>();
+                    foreach (var state in ModelState)
+                    {
+                        foreach (var error in state.Value.Errors)
+                        {
+                            errors.Add(error.ErrorMessage);
+                        }
+                    }
+
+                    return BadRequest(errors);
+                }
+            }
+            
+            var requestedEvent = new CheckInRequestedEvent(Guid.NewGuid().ToString(), nameof(CheckInRequestedEvent), DateTime.UtcNow, checkIn);
+
+            var queueInfo = _queueInfoService.GetQueueInfo(nameof(CheckInRequestedEvent));
+            if (queueInfo == null)
+                throw new ArgumentNullException(nameof(queueInfo));
+
+            _eventDispatcher.SetQueueConnectionAndName(queueInfo.QueueConnection, queueInfo.QueueName);
+
+            string messageId = await _eventDispatcher.Dispatch(requestedEvent);
+
+            var response = new CheckInResponseViewModel { Success = true, ResponseMessage = "Check-In request accepted.", MessageId = messageId };
+            return Accepted(response);
+        }
     }
 }
