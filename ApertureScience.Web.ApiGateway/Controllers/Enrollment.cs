@@ -1,4 +1,5 @@
 ﻿using ApertureScience.Library.Event.Abstraction;
+using ApertureScience.Library.Extension;
 using ApertureScience.Library.Messaging.Abstraction;
 using ApertureScience.Web.ApiGateway.Event;
 using ApertureScience.Web.ApiGateway.Event.ViewModels;
@@ -39,6 +40,39 @@ namespace ApertureScience.Web.ApiGateway.Controllers
             _queueManager = queueManager;
            
         }
+
+        [HttpGet()]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetEnroll(string messageId)
+        {
+            if (string.IsNullOrEmpty(messageId))
+                return BadRequest("Message Id is empty");
+
+            Guid requestedMessageId;
+            if (!Guid.TryParse(messageId, out requestedMessageId))
+                return BadRequest("Message Id is not valid");
+
+            var queueInfo = _queueInfoService.GetQueueInfo(nameof(EnrollmentRespondedEvent));
+            if (queueInfo == null)
+                throw new ArgumentNullException(nameof(queueInfo));
+           
+            _queueManager.CreateClient(queueInfo.QueueConnection, queueInfo.QueueName);
+
+            bool messageFound = await _queueManager.PeekAsync(messageId);
+
+            if (messageFound)
+            {
+                IMessage receivedMessage = await _queueManager.ReceiveAsync();
+                var respondedEvent = receivedMessage.Body.ToString().ReadFromJson<EnrollmentRespondedEvent>();
+                return Ok(respondedEvent.PayLoad.ToString());
+            }
+            else
+                return NotFound();
+
+        }
+
         [HttpPost]
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(EnrollmentResponseViewModel))]
