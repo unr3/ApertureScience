@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Acceleromet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Web.ApiGateway", "ApertureScience.Web.ApiGateway\ApertureScience.Web.ApiGateway.csproj", "{2F28C6B2-1C12-4F6F-8CD1-DDC99DE1873D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeGenerator.Function", "ApertureScience.ActivationCodeGenerator.Function\ApertureScience.ActivationCodeGenerator.Function.csproj", "{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.ActivationCodeGenerator.Function", "ApertureScience.ActivationCodeGenerator.Function\ApertureScience.ActivationCodeGenerator.Function.csproj", "{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeBatchGenerator.Function", "ApertureScience.ActivationCodeBatchGenerator.Function\ApertureScience.ActivationCodeBatchGenerator.Function.csproj", "{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
