@@ -7,11 +7,11 @@ namespace ApertureScience.Library.Cqrs.Query.Abstraction
     public class QueryResult
     {
       
-        int TotalPageCount { get; }
-        int CurrentPage { get; }
-        object Result { get; }
-        bool Success { get; set; }
-        string Message { get;  }
+        public int TotalPageCount { get; }
+        public int CurrentPage { get; }
+        public object Result { get; }
+        public bool Success { get; set; }
+        public string Message { get;  }
 
         public QueryResult(int totalPageCount,int currentPage,object result,bool success,string message)
         {
