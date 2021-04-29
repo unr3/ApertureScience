@@ -21,11 +21,11 @@ namespace ApertureScience.Enrollment.Data
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
 
-            if (_enrollmentRepo == null)
-                throw new ArgumentNullException(nameof(_enrollmentRepo));
+            if (enrollmentRepo == null)
+                throw new ArgumentNullException(nameof(enrollmentRepo));
 
-            if (_activationCodeRepo == null)
-                throw new ArgumentNullException(nameof(_activationCodeRepo));
+            if (activationCodeRepo == null)
+                throw new ArgumentNullException(nameof(activationCodeRepo));
 
             _context = context;
             _enrollmentRepo = enrollmentRepo;
