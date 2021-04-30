@@ -13,14 +13,14 @@ namespace ApertureScience.Web.ApiGateway.Event
 
 
         public DateTime DateTimeUTC { get; }
-        public object Result { get; }
+        public object PayLoad { get; }
 
-        public AccelerometerIngestUserDataRespondedEvent(string id, string name, DateTime dateTimeUtc, object result)
+        public AccelerometerIngestUserDataRespondedEvent(string id, string name, DateTime dateTimeUtc, object payLoad)
         {
             Id = id;
             Name = name;
             DateTimeUTC = dateTimeUtc;
-            Result = result;
+            PayLoad = payLoad;
 
         }
     }
