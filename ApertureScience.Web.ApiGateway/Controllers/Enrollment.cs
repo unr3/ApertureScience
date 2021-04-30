@@ -154,8 +154,6 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         {
            
             if (!ModelState.IsValid)
-            {
-                if (!ModelState.IsValid)
                 {
                     var errors = new List<string>();
                     foreach (var state in ModelState)
@@ -168,7 +166,7 @@ namespace ApertureScience.Web.ApiGateway.Controllers
 
                     return BadRequest(errors);
                 }
-            }
+            
             
             var requestedEvent = new CheckInRequestedEvent(Guid.NewGuid().ToString(), nameof(CheckInRequestedEvent), DateTime.UtcNow, checkIn);
 
