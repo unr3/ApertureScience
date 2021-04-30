@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.CheckIn.Fun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Function", "ApertureScience.AccelerometerIngest.Function\ApertureScience.AccelerometerIngest.Function.csproj", "{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngestUserData.Function", "ApertureScience.AccelerometerIngestUserData.Function\ApertureScience.AccelerometerIngestUserData.Function.csproj", "{989B2426-E82F-4EE2-BC3B-7086B12D338B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989B2426-E82F-4EE2-BC3B-7086B12D338B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989B2426-E82F-4EE2-BC3B-7086B12D338B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989B2426-E82F-4EE2-BC3B-7086B12D338B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989B2426-E82F-4EE2-BC3B-7086B12D338B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
