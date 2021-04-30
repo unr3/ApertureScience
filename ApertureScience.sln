@@ -33,11 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Web.ApiGate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.ActivationCodeGenerator.Function", "ApertureScience.ActivationCodeGenerator.Function\ApertureScience.ActivationCodeGenerator.Function.csproj", "{5A0391F2-1A78-4FA0-9D6F-3CCEB8B8DFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.ActivationCodeBatchGenerator.Function", "ApertureScience.ActivationCodeBatchGenerator.Function\ApertureScience.ActivationCodeBatchGenerator.Function.csproj", "{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.ActivationCodeBatchGenerator.Function", "ApertureScience.ActivationCodeBatchGenerator.Function\ApertureScience.ActivationCodeBatchGenerator.Function.csproj", "{F8F535B5-CC18-4C5B-8AF9-4B4B9D365CEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.Enrollment.Function", "ApertureScience.Enrollment.Function\ApertureScience.Enrollment.Function.csproj", "{B4D86C73-6335-4EFA-ACF4-05ED6F0FB14C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.Enrollment.Function", "ApertureScience.Enrollment.Function\ApertureScience.Enrollment.Function.csproj", "{B4D86C73-6335-4EFA-ACF4-05ED6F0FB14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.CheckIn.Function", "ApertureScience.CheckIn.Function\ApertureScience.CheckIn.Function.csproj", "{AC0EDA9D-D826-4BE6-BBAD-8E1CDDE87718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApertureScience.CheckIn.Function", "ApertureScience.CheckIn.Function\ApertureScience.CheckIn.Function.csproj", "{AC0EDA9D-D826-4BE6-BBAD-8E1CDDE87718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApertureScience.AccelerometerIngest.Function", "ApertureScience.AccelerometerIngest.Function\ApertureScience.AccelerometerIngest.Function.csproj", "{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{AC0EDA9D-D826-4BE6-BBAD-8E1CDDE87718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0EDA9D-D826-4BE6-BBAD-8E1CDDE87718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0EDA9D-D826-4BE6-BBAD-8E1CDDE87718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE2D6A2-137B-4AB8-A6E2-7E80D0D9B6C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
