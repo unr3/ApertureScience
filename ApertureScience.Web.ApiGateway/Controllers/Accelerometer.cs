@@ -42,6 +42,39 @@ namespace ApertureScience.Web.ApiGateway.Controllers
             _queueManager = queueManager;
             _configuration = configuration;
         }
+
+
+        [HttpPost]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(IngestDataResponseViewModel))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Produces("application/json")]
+        public async Task<ActionResult<IngestDataResponseViewModel>> UserData([FromBody] UserDataViewModel userData)
+        {
+            int pageSize;
+            if (!int.TryParse(_configuration["PageSize"], out pageSize) || pageSize <= 0)
+                throw new ArgumentNullException(nameof(pageSize));
+
+
+            var queueInfo = _queueInfoService.GetQueueInfo(nameof(AccelerometerIngestUserDataRequestedEvent));
+            if (queueInfo == null)
+                throw new ArgumentNullException(nameof(queueInfo));
+
+
+            var requestedEvent = new AccelerometerIngestUserDataRequestedEvent(Guid.NewGuid().ToString(), nameof(AccelerometerIngestUserDataRequestedEvent), DateTime.UtcNow, userData.UserId, userData.TimeStamp, userData.Page, pageSize);
+
+            _eventDispatcher.SetQueueConnectionAndName(queueInfo.QueueConnection, queueInfo.QueueName);
+            string messageId = await _eventDispatcher.Dispatch(requestedEvent);
+
+            var response = new IngestDataResponseViewModel { Success = true, ResponseMessage = "UserData request accepted.", MessageId = messageId };
+
+            return Accepted(response);
+
+
+        }
+
+
+
         [HttpPost]
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(IngestDataResponseViewModel))]
