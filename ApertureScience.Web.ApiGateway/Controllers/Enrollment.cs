@@ -81,20 +81,6 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         public async Task<ActionResult<EnrollmentResponseViewModel>> Enroll([FromBody] EnrollmentViewModel enrollment)
         {
 
-            if (!ModelState.IsValid)
-            {
-              
-                var errors = new List<string>();
-                foreach (var state in ModelState)
-                {
-                    foreach (var error in state.Value.Errors)
-                    {
-                        errors.Add(error.ErrorMessage);
-                    }
-                }
-
-                return BadRequest(errors);
-            }
 
             enrollment.Password = HashService.Hash(enrollment.Password, $"{enrollment.Email}{enrollment.Code}", HashTypeEnum.Sha512);
 
@@ -153,21 +139,7 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         public async Task<ActionResult<CheckInResponseViewModel>> CheckIn(CheckInViewModel checkIn)
         {
            
-            if (!ModelState.IsValid)
-                {
-                    var errors = new List<string>();
-                    foreach (var state in ModelState)
-                    {
-                        foreach (var error in state.Value.Errors)
-                        {
-                            errors.Add(error.ErrorMessage);
-                        }
-                    }
-
-                    return BadRequest(errors);
-                }
-            
-            
+         
             var requestedEvent = new CheckInRequestedEvent(Guid.NewGuid().ToString(), nameof(CheckInRequestedEvent), DateTime.UtcNow, checkIn);
 
             var queueInfo = _queueInfoService.GetQueueInfo(nameof(CheckInRequestedEvent));

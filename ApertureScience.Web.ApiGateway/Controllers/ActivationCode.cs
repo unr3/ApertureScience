@@ -122,8 +122,6 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         public async Task<ActionResult<ActivationCodeResponseViewModel>> GenerateCode(ActivationCodeRequestViewModel activationCodeRequest)
         {
 
-            if (!ModelState.IsValid)
-                return BadRequest();
 
             var requestedEvent = new ActivationCodeRequestedEvent(Guid.NewGuid().ToString(), nameof(ActivationCodeRequestedEvent), DateTime.UtcNow, 1, activationCodeRequest.IsAdmin);
 
@@ -147,8 +145,7 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         [Produces("application/json")]
         public async Task<ActionResult<ActivationCodeResponseViewModel>> GenerateCodeBatch(ActivationCodeBatchRequestViewModel activationCodeBatchRequest )
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
+            
 
             if (activationCodeBatchRequest.BatchSize<= 0)
             {

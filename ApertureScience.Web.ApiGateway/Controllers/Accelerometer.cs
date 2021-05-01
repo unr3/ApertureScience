@@ -118,20 +118,6 @@ namespace ApertureScience.Web.ApiGateway.Controllers
                 return BadRequest("Data is empty");
 
 
-            if (!ModelState.IsValid)
-            {
-                var errors = new List<string>();
-                foreach (var state in ModelState)
-                {
-                    foreach (var error in state.Value.Errors)
-                    {
-                        errors.Add(error.ErrorMessage);
-                    }
-                }
-
-                return BadRequest(errors);
-            }
-
             int ingestBlockSize;
 
             if (!int.TryParse(_configuration["IngestBlockSize"], out ingestBlockSize) || ingestBlockSize <= 0)
