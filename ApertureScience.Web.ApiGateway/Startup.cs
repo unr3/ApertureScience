@@ -2,6 +2,7 @@ using ApertureScience.Library.Event.Abstraction;
 using ApertureScience.Library.Messaging.Abstraction;
 using ApertureScience.Library.Messaging.Implementation;
 using ApertureScience.Web.ApiGateway.Services;
+using ApertureScience.Web.ApiGateway.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,6 +18,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
+using ApertureScience.Web.ApiGateway.Data;
 
 namespace ApertureScience.Web.ApiGateway
 {
@@ -33,6 +39,39 @@ namespace ApertureScience.Web.ApiGateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+
+
+            // configure jwt authentication
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+            string conStr = Configuration.GetConnectionString("LoginConStr"); ;
+            services.AddDbContext<AuthDbContext>(options =>
+            options.UseSqlServer(conStr));
+
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<IQueueInfoService, QueueInfoService>();
             services.AddScoped<IEventDispatcher, EventDispatcher>();
             services.AddScoped<IQueueManager, BasicStorageQueueManager>();
@@ -60,8 +99,9 @@ namespace ApertureScience.Web.ApiGateway
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+
             });
-          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,12 +118,14 @@ namespace ApertureScience.Web.ApiGateway
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aperture API");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "";
             });
 
             app.UseRouting();
 
-         
+            app.UseAuthentication();
+            app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

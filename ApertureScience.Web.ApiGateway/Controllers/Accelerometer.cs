@@ -1,10 +1,12 @@
 ﻿using ApertureScience.Library.Event.Abstraction;
 using ApertureScience.Library.Extension;
 using ApertureScience.Library.Messaging.Abstraction;
+using ApertureScience.Web.ApiGateway.Commons;
 using ApertureScience.Web.ApiGateway.Event;
 using ApertureScience.Web.ApiGateway.Event.ViewModels;
 using ApertureScience.Web.ApiGateway.Services;
 using ApertureScience.Web.ApiGateway.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +17,7 @@ using System.Threading.Tasks;
 
 namespace ApertureScience.Web.ApiGateway.Controllers
 {
+    [Authorize(Roles = Role.User)]
     [Route("[controller]/[action]")]
     [ApiController]
     public class Accelerometer : ControllerBase

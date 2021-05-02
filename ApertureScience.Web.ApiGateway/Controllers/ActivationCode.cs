@@ -1,9 +1,11 @@
 ﻿using ApertureScience.Library.Event.Abstraction;
 using ApertureScience.Library.Extension;
 using ApertureScience.Library.Messaging.Abstraction;
+using ApertureScience.Web.ApiGateway.Commons;
 using ApertureScience.Web.ApiGateway.Event;
 using ApertureScience.Web.ApiGateway.Services;
 using ApertureScience.Web.ApiGateway.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +16,7 @@ using System.Threading.Tasks;
 namespace ApertureScience.Web.ApiGateway.Controllers
 {
 
+    [Authorize(Roles =Role.Admin)]
     [Route("[controller]/[action]")]
     [ApiController]
     public class ActivationCode : ControllerBase
@@ -50,6 +53,8 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetActivationCode(string messageId)
         {
             if (string.IsNullOrEmpty(messageId))
@@ -86,6 +91,8 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetActivationBatchCode(string messageId)
         {
             if (string.IsNullOrEmpty(messageId))
@@ -118,6 +125,8 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status202Accepted,Type =typeof(ActivationCodeResponseViewModel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Produces("application/json")]
         public async Task<ActionResult<ActivationCodeResponseViewModel>> GenerateCode(ActivationCodeRequestViewModel activationCodeRequest)
         {
@@ -142,6 +151,8 @@ namespace ApertureScience.Web.ApiGateway.Controllers
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(ActivationCodeResponseViewModel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Produces("application/json")]
         public async Task<ActionResult<ActivationCodeResponseViewModel>> GenerateCodeBatch(ActivationCodeBatchRequestViewModel activationCodeBatchRequest )
         {
