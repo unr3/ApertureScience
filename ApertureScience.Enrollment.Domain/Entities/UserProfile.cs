@@ -35,7 +35,7 @@ namespace ApertureScience.Enrollment.Domain.Entities
             Email = email;
             Password = password;
             Code = code;
-            IsAdmin = IsAdmin;
+            IsAdmin = isAdmin;
         }
     }
 }

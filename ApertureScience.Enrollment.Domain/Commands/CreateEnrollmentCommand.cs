@@ -19,7 +19,7 @@ namespace ApertureScience.Enrollment.Domain.Commands
             Email = email;
             Password = password;
             Code = code;
-            IsAdmin = IsAdmin;
+            IsAdmin = isAdmin;
         }
     }
 }
