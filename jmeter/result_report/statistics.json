@@ -1,0 +1,32 @@
+{
+  "Accelerometer ingest" : {
+    "transaction" : "Accelerometer ingest",
+    "sampleCount" : 4523,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 29110.16228167144,
+    "minResTime" : 738.0,
+    "maxResTime" : 47151.0,
+    "pct1ResTime" : 36600.8,
+    "pct2ResTime" : 37509.6,
+    "pct3ResTime" : 40147.520000000004,
+    "throughput" : 59.45761196776696,
+    "receivedKBytesPerSec" : 17.682917623831685,
+    "sentKBytesPerSec" : 226.97246599804788
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 4523,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 29110.16228167144,
+    "minResTime" : 738.0,
+    "maxResTime" : 47151.0,
+    "pct1ResTime" : 36600.8,
+    "pct2ResTime" : 37509.6,
+    "pct3ResTime" : 40147.520000000004,
+    "throughput" : 59.45761196776696,
+    "receivedKBytesPerSec" : 17.682917623831685,
+    "sentKBytesPerSec" : 226.97246599804788
+  }
+}
